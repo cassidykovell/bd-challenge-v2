@@ -31,6 +31,7 @@
 
 1. `pnpm dev --reset` -> You should only need to run this when you **first** start!
 2. `pnpm dev`
+3. `pnpm graphql-codegen` -> Use this to generate types for your graphql queries/mutations
 
 ### Resources:
 
@@ -43,13 +44,22 @@
 
 **Please feel free to use other libraries, if needed, do try to keep the library usage to a minimum**
 
+### Before you start
+
+1. Ensure your generated ["shopify.app.toml"](shopify.app.toml) file, after running `pnpm dev --restart`, is similar to the ["example.shopify.app.toml"](example.shopify.app.toml) file.
+2. Review the following [excalidraw diagram](https://excalidraw.com/#json=pOeUI2EiXtNAmJ5imDDij,rrdDjrWsqPorbRrO_onrVA) for the project overview.
+
+### Important Note!
+
+###### If you want syntax highlighting for the graphql queries, please start every query with `#graphql`
+
 #### Challenge Goals
 
 - [ ] When the app is accessed through the admin menu, the user must be able to see all the reviews tied to each individual product.
-- [ ] There should be a way for a customer to add a review to a product through the product page.
+- [ ] There should be a way for a user to add a review to a product through the product page.
   - [ ] Modify the ["review-embed"](extensions/review-embed) to create the ui for adding a review to a product from a product page.
-  - [ ] Create a [proxy endpoint](app/routes/api.public.$/route.tsx). This endpoint should receive reviews from the "review-embed" extension and apply the reviews to the associated products.
-- [ ] A review must a least keep track of the star rating and a message provided by the customer. Whatever other data you store and how you store the review is entirely up to you.
+  - [ ] Create a [proxy endpoint](app/routes/api.public.review.$productId/route.tsx). This endpoint should receive reviews from the "review-embed" extension and apply the reviews to the associated products.
+- [ ] The stored review data must at least keep track of the star rating and a message. Whatever other data you store and how you store the review is entirely up to you.
 
 ##### Extras (Not required)!
 
