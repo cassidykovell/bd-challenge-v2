@@ -52,7 +52,7 @@
 
 ### Important Note!
 
-##### If you want syntax highlighting for the graphql queries, please start every query with `#graphql`
+##### If you want syntax highlighting for the graphql queries, please start every query/mutation **string** with `#graphql`
 
 #### Challenge Goals
 
