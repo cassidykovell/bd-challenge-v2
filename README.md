@@ -25,7 +25,7 @@
 
 1. [Node LTS version](https://nodejs.org/en/download)
 2. [Shopify Partner Account](https://accounts.shopify.com/signup)
-3. [Shopify Development Store](https://partners.shopify.com/2395557/stores/new?store_type=test_store&data_type=static_data) -> To make it easier to test, make sure you create one with dummy data.
+3. [Shopify Development Store](https://partners.shopify.com/) -> Stores -> Create a development store -> Create a store to test and build -> Start with test data -> Create development store
 4. [PNPM](https://pnpm.io/installation) -> We use this as our only node package manager!
 
 ### Commands:
